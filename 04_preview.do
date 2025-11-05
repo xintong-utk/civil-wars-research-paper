@@ -27,3 +27,6 @@ label values sanction_type sanction_groups
 * Survival probability here refers to the probability of the conflict continuing.
 sts graph, by(sanction_type) xlabel(0(5)25) ylabel(0(0.2)1) legend(order(1 "No Sanction" 2 "Unilateral Sanction" 3 "Multilateral Sanction") pos(1) col(1)) title("Kaplan-Meier Survival Function") subtitle("Grouped by Sanction Type") xtitle("Civil War Duration (Years)") ytitle("Conflict Survival Probability (Continuation)") 
 
+* 4. Log-Rank Test
+* Test if there is a difference in survival rates (conflict duration) between cases with and without broad economic sanctions.
+sts test sanction_type, logrank

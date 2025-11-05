@@ -11,7 +11,7 @@ do "$dofiles/00_define_paths.do"
 * Use global macro for replicable path
 use "$data/ucdp_term_conflict_dta/ucdp_term_conflict_cleaned.dta", clear
 
-* 2. refine countrycode
+* 2. Refine countrycode
 * Install kountry only if it's not already installed
 cap ssc install kountry, replace
 * Convert the conflict location code (GW code) to ISO3C for merging
