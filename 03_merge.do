@@ -1,5 +1,5 @@
 * 03_step3_merge.do
-* This file merges the cleaned UCDP (Conflict-Year) and GSDB (Sanction-Country-Year) data.
+* This file merges the cleaned UCDP (Conflict-Year) and GSDB data.
 
 clear all
 set more off
@@ -11,7 +11,7 @@ sort iso3 year
 
 * 2. Merge GSDB data
 * "Many-to-One" merge：The GSDB data is Country-Year, and UCDP is Conflict-Year.
-merge m:1 iso3 year using "$data/gsdb_v4/gsdb_country_year_cleared.dta"
+merge m:1 iso3 year using "$data/gsdb_v4/gsdb_cleared.dta"
 
 * 3. Clean up the merged data
 * The 'merge' indicator variable shows how the GSDB data matched:
