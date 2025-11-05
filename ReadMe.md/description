@@ -1,31 +1,26 @@
-#Overview
-This repository contains all data-processing and analysis code for the article:
+PROJECT OVERVIEW: 
 How External Economic Sanctions Shape Civil War Outcomes: Comparing Multilateral and Unilateral Sanctions
 
-#Authors: Zi Gu & Xin Tong  
+This study seeks to answer the research question: How do multilateral and unilateral economic sanctions affect civil war termination? It builds on theories of international economic coercion and the commitment problem in civil war termination. It hypothesizes that multilateral sanctions, coordinated through international institutions such as the United Nations, are more likely to facilitate negotiated settlements by providing credible third-party enforcement that mitigates belligerents’ fear of post-agreement defection. In contrast, unilateral sanctions, imposed by single states without institutional oversight, are expected to undermine government capacity, narrow the bargaining range, and thus increase the probability of rebel military victory rather than peaceful resolution. The unit of analysis is the conflict-year. The dependent variable is civil war outcome, categorized as negotiated settlement, rebel victory, or government victory, derived from the UCDP Conflict Termination Dataset (v3). The independent variable is sanction type, coded using the Global Sanctions Database (GSDB) and the Threat and Imposition of Sanctions (TIES) dataset to distinguish between multilateral and unilateral sanctions. Control variables include conflict duration and intensity (UCDP), GDP per capita and military expenditure (World Bank), regime type (Polity V), and institutional quality (V-Dem). The empirical analysis employs a multinomial logit model to estimate the probability of different termination outcomes relative to ongoing conflict, supplemented by Cox proportional hazards models and robustness checks with conflict fixed effects. Our goal is to clarify whether externally imposed economic sanctions shorten wars by enforcing credible peace or instead prolong them by destabilizing bargaining dynamics.
 
-#Research Question: How do multilateral and unilateral sanctions affect civil war outcomes?
-
-We argue that:  
-Multilateral sanctions, backed by international institutions, facilitate negotiated settlements by mitigating the commitment problem.  
-Unilateral sanctions weaken state capacity and increase the likelihood of rebel victory, prolonging conflict.
-
-#Data Sources
+REPOSITORY
+Data sources:
 GSDB: Global Sanctions Database for sender identity & scope
 TIES: Threat and Imposition of Sanctions for timing & enforcement
 UCDP Conflict Termination v3: Civil war outcomes (1990–2022)
 World Bank WDI, Polity V, V-Dem: Controls for GDP, regime type, institutions
 
-DV: Civil war outcome (ongoing/negotiated/rebel/government).  
-IV: Sanction type (none/unilateral/multilateral).  
+Datasets:
+00_define_paths.do: Define project directories.
+01_gsdb_clear.do: Clean GSDB sanctions.
+02_ucdp_clear.do: Process UCDP conflict data.
+03_merge.do: Merge sanction & conflict datasets.
+04_preview.do: Generate descriptive statistics.
+05_cox_regression.do: Run Cox & multinomial logit models.
+06_gdp_clear.do: Add GDP covariates.
+07_VDem_clear.do: Import V-Dem indicators.
+08_pop_clear.do: Add population controls.
 
-#Code Files and Function
-`00_define_paths.do`: Define project directories.
-`01_gsdb_clear.do`: Clean GSDB sanctions.
-`02_ucdp_clear.do`: Process UCDP conflict data.
-`03_merge.do`: Merge sanction & conflict datasets.
-`04_preview.do`: Generate descriptive statistics.
-`05_cox_regression.do`: Run Cox & multinomial logit models.
-`06_gdp_clear.do`: Add GDP covariates.
-`07_VDem_clear.do`: Import V-Dem indicators.
-`08_pop_clear.do`: Add population controls.
+AUTHORS & CONTACT INFORMATION：
+Zi (Juno) Gu: zgu3@vols.utk.edu
+Xin Tong: xtong5@vols.utk.edu
