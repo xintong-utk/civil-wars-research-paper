@@ -18,7 +18,7 @@ Datasets:
 04_preview.do: Generate descriptive statistics.
 05_cox_regression.do: Run Cox & multinomial logit models.
 06_gdp_clear.do: Add GDP covariates.
-07_VDem_clear.do: Import V-Dem indicators.
+07_VDem_clear.do: Import V-Dem indicators.availabe through: https://liveutk-my.sharepoint.com/:u:/g/personal/zgu3_vols_utk_edu/EQ6nZkdQRx1DkJmXagGvbmUBrfiyM5_9tJAxuuJebg9loA?e=dOBYZw
 08_pop_clear.do: Add population controls.
 
 AUTHORS & CONTACT INFORMATION：
